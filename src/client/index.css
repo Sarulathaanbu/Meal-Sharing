@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import 'theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family:'Bodoni Moda', sans-serif;
   box-sizing: border-box;
 }
 
-#root {
-  padding-left: 30%;
-  padding-right: 30%;
-  height: 100vh;
+nav a{
+  display: flex;
+  color: white;
+  display: flex;
+  justify-items: space-evenly;
 }
+
 
 body {
   margin: 0;
   font-size: 17px;
+  padding: 2rem;
+  background: url();
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
 }
 
 ul {
@@ -24,7 +32,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #2d3233;
+  color: white;
 }
 
 button {
@@ -39,8 +47,8 @@ button {
 
 @media screen and (max-width: 1400px) {
   #root {
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
