@@ -1,54 +1,56 @@
-const { query, request, response } = require("express");
 const express = require("express");
 const router = express.Router();
 const knex = require("../database");
 
-router.get("/", async (req, res) => {
+router.get("/", async (request, response) => {
     try {
-        const reviews = await knex("review")
-        res.send(reviews)
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reviews = await knex("review");
+        response.json(reviews);
     } catch (error) {
-        throw error
+        throw error;
     }
-})
+});
 
-router.post("/", async (req, res) => {
+router.post("/", async (request, response) => {
     try {
-        console.log(req.body)
-        const newReview = await knex("review").insert(req.body)
-        res.send("Review added succesfully")
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reviews = await knex("review").insert(request.body);
+        response.send('it added');
     } catch (error) {
-        throw error
+        throw error;
     }
-})
+});
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (request, response) => {
     try {
-        const review = await knex("review").where("id", req.params.id)
-        res.send(review)
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reviews = await knex("review").where('id', parseInt(request.params.id));
+        response.json(reviews);
     } catch (error) {
-        throw error
-
+        throw error;
     }
-})
+});
 
-
-router.put("/:id", async (req, res) => {
+router.put("/:id", async (request, response) => {
     try {
-        await knex("review").where("id", req.params.id).update(req.body)
-        res.send("Review deleted")
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reviews = await knex("review").where('id', parseInt(request.params.id)).update(request.body);
+        response.json(reviews);
     } catch (error) {
-        throw error
+        throw error;
     }
-})
+});
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async (request, response) => {
     try {
-        await knex("review").where("id", req.params.id).del()
-        res.send("Review deleted")
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reviews = await knex("review").where('id', parseInt(request.params.id)).del();
+        response.json(reviews);
     } catch (error) {
-        throw error
+        throw error;
     }
-})
+});
+
 
 module.exports = router;

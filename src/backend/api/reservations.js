@@ -1,61 +1,56 @@
-const { query, request, response } = require("express");
 const express = require("express");
 const router = express.Router();
 const knex = require("../database");
 
-
-router.get("/", async (req, res) => {
+router.get("/", async (request, response) => {
     try {
-        const reservations = await knex("reservation")
-        res.send(reservations)
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reservations = await knex("reservation");
+        response.json(reservations);
     } catch (error) {
-        throw error
+        throw error;
     }
+});
 
-})
-
-router.post("/", async (req, res) => {
+router.post("/", async (request, response) => {
     try {
-        console.log(req.body)
-        await knex("reservation").insert(req.body)
-        res.send(req.body)
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reservations = await knex("reservation").insert(request.body);
+        response.send('it added');
     } catch (error) {
-        throw error
+        throw error;
     }
+});
 
-})
-
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (request, response) => {
     try {
-        const reservation = await knex("reservation").where("id", req.params.id)
-        res.json(reservation)
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reservations = await knex("reservation").where('id', parseInt(request.params.id));
+        response.json(reservations);
     } catch (error) {
-        throw error
+        throw error;
     }
+});
 
-})
-
-router.put("/:id", async (req, res) => {
+router.put("/:id", async (request, response) => {
     try {
-        await knex("reservation").where("id", req.params.id).update(req.body)
-        res.send("Reservation updated succesfully!")
-
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reservations = await knex("reservation").where('id', parseInt(request.params.id)).update(request.body);
+        response.json(reservations);
     } catch (error) {
-        throw error
+        throw error;
     }
-})
+});
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async (request, response) => {
     try {
-        await knex("reservation").where("id", req.params.id).del()
-        res.send("Reservation deleted")
-
-    } catch {
-        throw error
+        // knex syntax for selecting things. Look up the documentation for knex for further info
+        const reservations = await knex("reservation").where('id', parseInt(request.params.id)).del();
+        response.json(reservations);
+    } catch (error) {
+        throw error;
     }
-
-})
-
+});
 
 
 module.exports = router;
