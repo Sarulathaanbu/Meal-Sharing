@@ -1,0 +1,406 @@
+.header{   
+    height:85px;  
+    background-color:rgb(21, 81, 88);  
+    display: flex;
+    justify-content: space-between; 
+    height: fit-content;
+  }
+  
+  .logo_container img{
+    width: 50%;
+    height:100%;
+    background-color:white;
+  }
+  
+  .navigation{
+  display: flex;
+  flex-wrap: wrap; 
+  color: white;
+   width: 50%;
+   justify-content: space-around;
+   margin-right: 10px;
+   align-items: center;
+   text-transform: uppercase;
+   font-size: 20px;
+   font-family: 'Open Sans', sans-serif;
+  }
+  
+  .navigation a:hover{
+    color:rgb(21, 81, 88); 
+    background-color: white;
+    font-weight: bold; 
+    border-radius: 10px;
+    padding: 8px;
+  }
+  
+  .home-page{
+    display: flex;
+    align-items: center;
+    background-image: url(https://i.postimg.cc/g2b9Vjn6/6707.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    width:100%;  
+    height:80%;
+    font-family: "Alex Brush", cursive;
+  }
+/*   
+  .home-page input{
+    background-color: rgb(216, 218, 228);
+  } */
+  
+  .wellcome{
+    height: fit-content;
+    width: 50%;
+    padding: 3%;
+    margin-left: 25%;
+    box-shadow:0px 0px 10px white;
+    background-color: rgba(161, 220, 228, 0.4);    
+    text-align: center !important;         
+    line-height: 2em; 
+    align-items: center; 
+    color: black;
+    font-size: 25px;
+  } 
+  
+  .meals-container{ 
+    background-image: url(https://i.postimg.cc/WzdqjXvC/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Cochin;
+    height: fit-content;
+  }
+    
+  .meal_container{
+    font-weight: bold;
+    background-color:rgb(166, 223, 233);
+    opacity: 0.8;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px gray;
+    padding: 10px;
+    border:none;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .meal_container:hover{
+    opacity: 1;
+  }
+  
+  .search_input{
+    margin-top: 3%;
+    width: 100%;
+    background-color: rgb(197, 232, 238);
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px gray;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .meal_title{
+    font-size: 30px;
+  }
+
+  .display{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+    .description{
+      font-size: 20px;
+    }
+  
+  .description button{
+    margin: 10px;
+    background-color:rgb(21, 81, 88); 
+    color: white;
+    cursor: pointer;
+    font-size: larger;
+  }
+  
+  .add_meal_form, .add_review_form, .add_reservation_form{
+    max-width:800px;
+  margin:10px auto; 
+  padding:10px 25px;
+  border-radius:5px;
+  border: 1px solid rgb(18, 51, 59);
+  background-color:rgb(21, 81, 88) ;
+  color: white;
+  
+  }
+  
+  .add_meal_form label, .add_review_form label, .add_reservation_form label{
+    display:inline-block;
+    width:40%;
+    padding:10px;
+    text-transform:uppercase;
+    font-size:17px;
+    font-weight: 600;
+    color:white;
+    text-align: left;
+  }
+  
+  .add_meal_form input, .add_meal_form textarea, 
+  .add_review_form input, .add_review_form textarea, .add_review_form select,
+  .add_reservation_form input{
+    display:inline-block;
+    width:60%;
+    box-shadow: 0px 0px 10px gray;
+    background-color: white;
+    margin-bottom: 5px;
+    padding:.5rem;
+    font-size:18px;
+    border-radius:5px;
+  }
+  
+  .meal_submit_btn, .reservation_submit_btn, .review_submit_btn{ 
+  background:rgb(140, 212, 224);
+  padding:8px;
+  display: block;
+  color:white;
+  margin:0px auto; 
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s all ease;
+    
+  }
+  
+  .meal_submit_btn:hover, .reservation_submit_btn:hover, .review_submit_btn:hover{
+    background:gray;
+  }
+  
+  .search_meal_box span{
+    color: rgb(47, 43, 100);
+    font-size: larger; 
+  }
+  
+  .search_meal_box h4{
+    font-size: larger; 
+  }
+  
+  .meal_image img, .meal_info img{
+    width:250px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgb(63, 62, 62);
+   
+  }
+  
+  .search_meal_list{    
+    color: rgb(24, 12, 1);
+    font-weight: bolder;
+    line-height: 3em;
+  }
+  
+  .meal-info-page{
+  
+    background-image: url("https://i.postimg.cc/xCryg6k0/Which-is-the-best-app-to-make-reservations-at-restaurants.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .meal-review-page{
+    background-image: url("https://i.postimg.cc/VNc4tqV3/Thumbnail-Blog-Increase-student-engagement-with-Oliver-enhanced-resource-reviews-320-192-85.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .search_meal{
+  cursor: pointer;  
+  font-size: larger;
+  color: black;
+  list-style: none;
+  }
+  
+  .meal_reservation{  
+  padding:50px;  
+  }
+  
+  .meal_info, .add_meal_page{
+    width:60%;
+    height: fit-content;
+    margin: 10px auto;
+    padding: 15px;    
+    background-color: rgba(243, 234, 234, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    line-height: 1.1em;
+    color:rgb(33, 21, 61);
+  }
+  
+  .meal_info{
+    background-color: rgba(69, 62, 82, 0.5);
+    color: white;
+    
+  }
+  
+  .add-meal-background{
+     background-image: url(https://i.postimg.cc/WzdqjXvC/bg.jpg);
+     background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .review_info{
+    width:60%;
+    height: fit-content;
+    margin: 2px auto;
+    padding: 15px;    
+    background-color: rgba(17, 42, 49, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    line-height: 1.5em;
+    color:rgb(239, 238, 245);
+  }
+  
+
+  
+  .footer{
+  background-color: rgb(21, 81, 88);
+    padding:1%;
+    color: white;
+    height: fit-content;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px){
+  
+    h1{
+        font-size: large;
+        font-weight: bold;
+        line-height: 1.5em;
+    }
+  
+    .navigation{
+        flex-direction: column;
+        font-size: 55%;
+        font-weight: bolder;
+        width: 100%;
+    }
+    
+    .search_meal_box h4{
+      font-size: 90%;
+      font-weight: bolder;
+      line-height: 1em;
+    }
+  
+    .wellcome{
+      margin-left: 35%;
+      margin-right:10%;
+      font-size: small;
+    } 
+  
+    .home-page input, button{
+        font-size: x-small;
+        height: fit-content;
+    }
+  
+    .meal_container{
+      padding: 5%;
+      margin: 5%;
+    }
+  
+    .meal_reservation{  
+      padding:6%;  
+      }
+      
+      .meal_info, .add_meal_page{
+        width: 100%;
+        font-size: 30px;
+        font-weight: bolder;
+        line-height: 1.1em;
+      }
+      
+      .meal_info img{
+        width: 100%;
+        height: 100%;
+      }
+  
+      .add_meal_form, .add_review_form, .add_reservation_form{
+        max-width:100%;
+      margin:10px auto;
+      padding: 1%;
+      font-size: smaller;
+      }
+      
+      .add_meal_form label, .add_review_form label, .add_reservation_form label{
+        font-size:smaller;
+        width: 50%;
+        padding: 2%;
+      }
+    }
+      @media (max-width: 769px){
+  
+        h1{
+            font-size: large;
+            font-weight: bold;
+            line-height: 1.5em;
+        }
+        
+        .search_meal_box h4{
+          font-size: 90%;
+          font-weight: bolder;
+          line-height: 1em;
+      }
+      
+        .wellcome{
+          margin-left: 35%;
+          margin-right:10%;
+          font-size: small;
+        } 
+      
+        .home-page input, button{
+            font-size: x-small;
+            height: fit-content;
+        }
+      
+        .meal_container{
+          padding: 5%;
+          margin: 5%;
+        }
+      
+        .meal_reservation{  
+          padding:6%;  
+          }
+          
+          .meal_info, .add_meal_page{
+            width: 100%;
+            font-size: small;
+            font-weight: bolder;
+            line-height: 1.1em;
+          }
+          
+          .meal_info img{
+            width: 100%;
+            height: 100%;
+          }
+      
+          .add_meal_form, .add_review_form, .add_reservation_form{
+            max-width:100%;
+          margin:10px auto;
+          padding: 1%;
+          font-size: smaller;
+          }
+          
+          .add_meal_form label, .add_review_form label, .add_reservation_form label{
+            font-size:smaller;
+            width: 50%;
+            padding: 2%;
+          }
+        }
